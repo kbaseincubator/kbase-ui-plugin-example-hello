@@ -8,6 +8,9 @@ module.exports = {
       addPlugins: true,
       configure: (jestConfig, { env, paths, resolve, rootDir }) => {
         jestConfig.transformIgnorePatterns = ["[/\\\\]node_modules[/\\\\](?!kbase-ui-lib|antd/).+\\.js$"];
+        // jestConfig.transformIgnorePatterns = [
+        //   "/node_modules/(?!antd|rc-pagination|rc-calendar|rc-tooltip|kbase-ui-lib)/.+\\.js$"
+        // ];
         jestConfig.rootDir = "./src";
 
         return jestConfig;
@@ -18,7 +21,7 @@ module.exports = {
     {
       plugin: CracoAntDesignPlugin,
       options: {
-        customizeThemeLessPath: path.join(__dirname, "src/custom/style/antd/theme.less")
+        customizeThemeLessPath: path.join(__dirname, "src/custom/antd/theme.less")
       }
     }
   ]

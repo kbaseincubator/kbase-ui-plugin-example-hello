@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@kbase/ui-lib": "0.1.0-alpha.11",
+    "@kbase/ui-lib": "0.1.0-alpha.12",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",
     "@types/react": "16.8.22",
@@ -16,18 +16,19 @@
     "react-scripts": "3.0.1",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
-    "typescript": "3.5.2"
+    "typescript": "3.5.2",
+    "@craco/craco": "5.2.3",
+    "nodemon": "1.19.1",
+    "craco-antd": "1.11.0"
   },
-  "devDependencies": {
-    "@craco/craco": "^5.2.3",
-    "nodemon": "^1.19.1",
-    "craco-antd": "^1.11.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "nodemon -w ./craco.config.js -w ./src/custom/style/antd/theme.less --exec 'craco start'",
     "build": "craco build",
-    "test": "craco test --transformIgnorePatterns  \"<rootDir>[\\/]node_modules[\\/](?!@kbase/ui-lib).+\\.js$\"",
-    "eject": "react-scripts eject"
+    "testx": "craco test --transformIgnorePatterns  \"<rootDir>[\\/]node_modules[\\/](?!@kbase/ui-lib|rc-pagination|rc-calendar|rc-tooltip|antd).+\\.js$\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install-plugin": "bash scripts/install-plugin.bash"
   },
   "eslintConfig": {
     "extends": "react-app"
