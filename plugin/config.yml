@@ -15,6 +15,7 @@ install:
           # TODO: get rid of this!!
           params:
                 plugin: example-hello
+          title: Example Plugin - Hello!
     menu:
         - name: example-hello
           definition:

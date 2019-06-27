@@ -4,6 +4,7 @@ import { createReduxStore } from "./redux/store";
 import "./App.css";
 import { AppBase, DevWrapper } from "@kbase/ui-lib";
 import { Button } from "antd";
+import View from "./View-redux";
 
 const store = createReduxStore();
 
@@ -17,10 +18,7 @@ export default class App<AppProps, AppState> extends React.Component {
       <Provider store={store}>
         <DevWrapper>
           <AppBase>
-            <div className="App">
-              <p>Hello!</p>
-              <Button>Hi!</Button>
-            </div>
+            <View />
           </AppBase>
         </DevWrapper>
       </Provider>
