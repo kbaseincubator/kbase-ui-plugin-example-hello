@@ -1,0 +1,24 @@
+## Plugin Configuration
+---
+package:
+    author: KBase Developer
+    name: example-hello
+    description: An example plugin which says "hello"
+    type: iframe
+install:
+    routes:
+        - path: ['example-hello']
+          queryParams:
+              path: { literal: ['main'] }
+          widget: kb_iframe_loader
+          authorization: true
+          # TODO: get rid of this!!
+          params:
+                plugin: example-hello
+          title: Example Plugin - Hello!
+    menu:
+        - name: example-hello
+          definition:
+              path: ['example-hello']
+              label: Example Hello
+              icon: flask

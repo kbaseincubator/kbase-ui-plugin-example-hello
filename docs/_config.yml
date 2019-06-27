@@ -1,0 +1,11 @@
+    title: Example Hello Plugin
+    remote_theme: kbaseIncubator/kbase-github-pages-theme
+    search_enabled: false
+    aux_links: 
+        "Example Hello Plugin on Github":
+            - "//github.com/kbase/kbase-ui-plugin-example-hello"
+        "About KBase":
+            - "//kbase.us/about"
+    navigation:
+        menu:
+            - label: Overview
