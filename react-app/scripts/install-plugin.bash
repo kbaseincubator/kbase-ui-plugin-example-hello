@@ -1,5 +1,5 @@
-# Clean the target directory.
-rm -rf ../plugin/iframe_root/*
+# Remove the iframe_root target directory.
+rm -rf ../plugin/iframe_root
 
-# Simply copy all of the build artifacts there.
-cp -pr build/* ../plugin/iframe_root
+# The build directory simply becomes the iframe_root
+cp -pr build ../plugin/iframe_root

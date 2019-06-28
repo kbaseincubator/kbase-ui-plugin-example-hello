@@ -1,0 +1,32 @@
+---
+  description: Show hello message
+  specs:
+  - description: the hello message should appear
+    baseSelector: []
+    tasks:
+      # run subtask "login" which injects a token (from config in kbase-ui)
+      - subtask: login
+      # The "navigate" action will trigger a ui route request to the given path
+      - action: navigate
+        path: example-hello
+      # The subtask "plugin" will navigate to the plugin iframe.
+      - subtask: plugin
+      # Now we get to the actual testable components.
+      # Above, a failure will indeed fail the test, but below we are actually
+      # poking at the plugin.
+      - wait: forElement
+        description: Locate and then click a button
+        selector:
+          - type: plugin
+            value: example-hello
+          - type: button
+            value: hi_button
+      - action: click
+      - wait: forText
+        description: Ensure that some text was inserted into the dom after clicking the button
+        selector:
+          - type: plugin
+            value: my-plugin
+          - type: element
+            value: click_text
+        text: Greetings Human

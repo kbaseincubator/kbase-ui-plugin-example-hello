@@ -3,23 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "5.2.3",
     "@kbase/ui-lib": "0.1.0-alpha.22",
+    "@types/enzyme": "3.9.4",
+    "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",
     "@types/react": "16.8.22",
     "@types/react-dom": "16.8.4",
     "@types/react-redux": "7.1.0",
     "antd": "3.19.8",
+    "craco-antd": "1.11.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "nodemon": "1.19.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-redux": "7.1.0",
     "react-scripts": "3.0.1",
+    "react-test-renderer": "16.8.6",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
-    "typescript": "3.5.2",
-    "@craco/craco": "5.2.3",
-    "nodemon": "1.19.1",
-    "craco-antd": "1.11.0"
+    "typescript": "3.5.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -27,7 +32,6 @@
     "build": "craco build",
     "testx": "craco test --transformIgnorePatterns  \"<rootDir>[\\/]node_modules[\\/](?!@kbase/ui-lib|rc-pagination|rc-calendar|rc-tooltip|antd).+\\.js$\"",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "install-plugin": "bash scripts/install-plugin.bash"
   },
   "eslintConfig": {
@@ -46,5 +50,14 @@
     ]
   },
   "homepage": "./",
-  "proxy": "https://ci.kbase.us"
+  "proxy": "https://ci.kbase.us",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "src/App.tsx",
+      "!/node_modules/",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts"
+    ]
+  }
 }
