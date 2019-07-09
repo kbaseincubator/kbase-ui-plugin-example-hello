@@ -2,8 +2,6 @@ import React from 'react';
 import './style.css';
 import { Button, Alert, Spin, Tag } from 'antd';
 import { Authorization, AuthState } from '../../redux/auth/store';
-import { Channel } from '../../lib/windowChannel';
-import Runtime from '../../lib/Runtime';
 import { DevelopStatus } from '../../redux/develop/store';
 
 function authStateLabel(status: AuthState) {
@@ -38,14 +36,10 @@ interface DevelopComponentState {}
 export default class Develop extends React.Component<DevelopProps, DevelopComponentState> {
     tokenRef: React.RefObject<HTMLInputElement>;
 
-    // channel: Channel;
-    runtime: Runtime;
-
     constructor(props: DevelopProps) {
         super(props);
 
         this.tokenRef = React.createRef();
-        this.runtime = new Runtime();
     }
 
     // React Lifecycle

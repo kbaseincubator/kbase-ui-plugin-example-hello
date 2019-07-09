@@ -131,10 +131,6 @@ function setupAndStartChannel(channel: Channel, dispatch: ThunkDispatch<BaseStor
 
     channel.on('add-button', ({ button }) => {
         console.warn('add button not yet supported');
-        // button.callback = () => {
-        //     this.iframeChannel.send.apply(this.iframeChannel, button.callbackMessage);
-        // };
-        // this.runtime.send('ui', 'addButton', button);
     });
 
     channel.on('open-window', ({ url }) => {
@@ -171,12 +167,10 @@ function setupAndStartChannel(channel: Channel, dispatch: ThunkDispatch<BaseStor
     // });
 
     // this.channel.on('send-instrumentation', (instrumentation) => {
-    //     this.runtime.service('instrumentation').send(instrumentation);
     // });
 
     channel.on('ui-navigate', (to) => {
         console.warn('ui-navigate not yet supported');
-        // this.runtime.send('app', 'navigate', to);
     });
 
     channel.on('post-form', (config) => {
@@ -185,9 +179,6 @@ function setupAndStartChannel(channel: Channel, dispatch: ThunkDispatch<BaseStor
     });
 
     channel.on('set-title', (config) => {
-        console.warn('set-title not yet supported');
-        // this.runtime.send('ui', 'setTitle', config.title);
-        // dispatch(sendMessage('set-title', { title: config.title }));
         dispatch(setTitle(config.title));
     });
 

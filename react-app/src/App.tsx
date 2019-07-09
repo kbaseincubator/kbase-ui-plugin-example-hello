@@ -2,9 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createReduxStore } from './redux/store';
 import './App.css';
-// import { AppBase, DevWrapper } from "@kbase/ui-lib";
-import AppBase from './kbaseUI/components/AppBase';
-import View from './View-redux';
+import { AppBase } from '@kbase/ui-lib';
+import View from './components/views/first';
 
 const store = createReduxStore();
 

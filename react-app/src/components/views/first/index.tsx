@@ -1,9 +1,8 @@
 import { Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
-// import { appSetTitle } from '@kbase/ui-lib';
-import { appSetTitle } from './kbaseUI/redux/integration/actions';
-import { StoreState } from './redux/store';
-import View from './View';
+import { appSetTitle } from '@kbase/ui-lib';
+import { StoreState } from '../../../redux/store';
+import View from './view';
 
 export interface OwnProps {}
 

@@ -1,9 +1,6 @@
 import { Action, Reducer } from 'redux';
-// import { baseReducer } from "@kbase/ui-lib";
-// import { BaseStoreState } from "@kbase/ui-lib";
-
-import baseReducer from '../kbaseUI/redux/reducers';
-import { BaseStoreState } from '../kbaseUI/redux/store';
+import { baseReducer } from '@kbase/ui-lib';
+import { BaseStoreState } from '@kbase/ui-lib';
 
 import { StoreState } from './store';
 

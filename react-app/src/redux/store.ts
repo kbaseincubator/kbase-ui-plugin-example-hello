@@ -1,5 +1,4 @@
-// import { BaseStoreState, makeBaseStoreState } from "@kbase/ui-lib";
-import { BaseStoreState, makeBaseStoreState } from '../kbaseUI/redux/store';
+import { BaseStoreState, makeBaseStoreState } from '@kbase/ui-lib';
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
