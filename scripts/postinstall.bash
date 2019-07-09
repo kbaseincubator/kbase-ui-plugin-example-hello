@@ -1,6 +1,6 @@
 echo "Running plugin post install script"
 cd react-app && \
-yarn install && \
+yarn install --no-lockfile --cache-folder=".yarn-cache" && \
 echo "✓ dependencies installed successfully" && \
 yarn run build && \
 echo "✓ built successfully" && \
