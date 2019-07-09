@@ -6,11 +6,13 @@ node_modules/
 # The built plugin app goes here. We don't want to check it it from 
 # a developer session, but we do like to keep the directory in the repo,
 # thus the placeholder README file.
-/plugin/iframe_root/*
-!/plugin/iframe_root/README.md 
+/plugin/iframe_root
 
 # created by npm if install with --no-cache option
 false
 
 # Artifact of local github pages development
 _site
+
+# Don't check in coverage reports
+coverage

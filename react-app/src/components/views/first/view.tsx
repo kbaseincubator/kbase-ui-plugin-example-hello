@@ -1,5 +1,5 @@
 import React from "react";
-import "./View.css";
+import "./style.css";
 import { Button } from "antd";
 
 export interface ViewProps {

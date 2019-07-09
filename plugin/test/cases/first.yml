@@ -1,0 +1,23 @@
+---
+  description: Show hello message
+  specs:
+  - description: the hello message should appear
+    baseSelector: []
+    tasks:
+      # run subtask "login" which injects a token (from config in kbase-ui)
+      - subtask: login
+      # The "navigate" action will trigger a ui route request to the given path
+      - action: navigate
+        path: example-hello
+      # The subtask "plugin" will navigate to the plugin iframe.
+      - subtask: plugin
+      # Now we get to the actual testable components.
+      # Above, a failure will indeed fail the test, but below we are actually
+      # poking at the plugin.
+      - wait: forText
+        description: Ensure that the "Hello" has appeared
+        selector:
+          - type: plugin
+            value: example-hello
+          - type: field
+            value: greeting
