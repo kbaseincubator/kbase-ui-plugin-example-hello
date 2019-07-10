@@ -1,23 +1,23 @@
 {
-  "name": "kbase-ui-plugin-example-hello",
-  "version": "1.0.0",
-  "description": "A kbase-ui plugin to implementing just about the simplest ui plugin with the new CRATS architecture.",
-  "main": "index.js",
-  "devDependencies": {
-    "common-readme": "^1.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bash scripts/postinstall.bash"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kbase/kbase-ui-plugin-example-hello.git"
-  },
-  "author": "KBase Developers",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "bugs": {
-    "url": "https://github.com/kbase/kbase-ui-plugin-jexample-hello/issues"
-  },
-  "homepage": "https://github.com/kbase/kbase-ui-plugin-example-hello#readme"
+    "name": "kbase-ui-plugin-example-hello",
+    "version": "1.0.0",
+    "description": "A kbase-ui plugin to implementing just about the simplest ui plugin with the new CRATS architecture.",
+    "main": "index.js",
+    "devDependencies": {
+        "common-readme": "^1.1.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-plugin": "bash scripts/build-plugin.bash"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kbase/kbase-ui-plugin-example-hello.git"
+    },
+    "author": "KBase Developers",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "bugs": {
+        "url": "https://github.com/kbase/kbase-ui-plugin-jexample-hello/issues"
+    },
+    "homepage": "https://github.com/kbase/kbase-ui-plugin-example-hello#readme"
 }
